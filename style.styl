@@ -90,15 +90,20 @@ p.small
 
 // General
 
-nav
-  li
-    a::after
-      content ""
-      width 100%
-      height grid-size
-      border-radius grid-size
-      background-color color-accent
-      display block
+a.link::after
+  content ""
+  width 100%
+  height grid-size
+  border-radius grid-size
+  background-color color-accent
+  display block
+
+a.button
+  padding grid-size*4 grid-size*6
+  background color-dark
+  color color-light
+  margin grid-size*2
+  border-radius grid-size*2
 
 nav, .content
   width grid-fullwidth
@@ -124,9 +129,8 @@ header
 
 // Section
 
-
 section
-  width             100%
+  width 100%
 
 section.primary
   background-color color-primary
@@ -141,7 +145,42 @@ section.primary
       margin auto
       margin-top grid-size*10
 
+section.secondary
+  text-align center
+  border-bottom grid-size solid color-secondary
 
+  &:last-child
+    border-bottom 0
+
+  h2
+    margin-bottom grid-size*6
+    
+  .blocks
+    margin-top grid-size*6
+
+  .content
+    padding grid-size*12 grid-size*2
+
+
+// Blocks
+
+.blocks
+  display flex
+  flex-direction row
+
+  .block
+    width grid-onethird
+    border-radius grid-size*2
+    margin grid-size*2
+
+  .block.primary
+    background-color color-primary
+    padding grid-size*6 grid-size*4 0 grid-size*4
+
+    img
+      height auto
+      width 100%
+      padding grid-size*6 grid-size*2 0 grid-size*2
 
 
 
