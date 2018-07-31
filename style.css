@@ -70,6 +70,10 @@ a.link::after {
   background-color: #ffd33e;
   display: block;
 }
+a.link.inline {
+  padding: 0;
+  display: inline-block;
+}
 a.button {
   padding: 16px 24px;
   background: #202634;
@@ -141,4 +145,17 @@ section.secondary .content {
   height: auto;
   width: 100%;
   padding: 24px 8px 0 8px;
+}
+footer {
+  background: #f4f4f4;
+  width: 100%;
+  color: #202634;
+}
+footer a {
+  color: #202634;
+}
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 8px 112px 8px;
 }
