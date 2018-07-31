@@ -1,6 +1,6 @@
 // Import
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
 
 
@@ -23,87 +23,72 @@ color-secondary = #F4F4F4
 // Set up
 
 *
-  margin              0
-  padding             0
-  text-decoration     none
-  outline             none
-  border              none
-  -webkit-box-sizing  border-box
-  -moz-box-sizing     border-box
-  box-sizing          border-box
+  margin 0
+  padding 0
+  text-decoration none
+  outline none
+  border none
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
 
 html
-  height              100%
-  font-size           62.5%
+  height 100%
+  font-size 62.5%
 
 body
-  height              100%
-  font-family         'Montserrat', sans-serif
-  color               color-dark
-  margin              auto
+  height 100%
+  font-family 'Montserrat', sans-serif
+  font-weight 400
+  color color-dark
+  margin auto
 
 li
-  list-style          none
-  display             inline-block
+  list-style none
+  display inline-block
 
 img
-  display             block
+  display block
 
 a
-  color               inherit
-  cursor              pointer
-  display             block
+  color inherit
+  cursor pointer
+  display block
 
 
 
 
 // Text
 
+h1, h2, a, p, p.small, .logo
+  padding grid-size*2
+  font-weight inherit
+
 h1
-  font-size         grid-size*12
-  line-height       grid-size*15
+  font-size grid-size*12
+  line-height grid-size*15
 
 h2
-  font-size         grid-size*6
-  line-height       grid-size*7.5
+  font-size grid-size*6
+  line-height grid-size*7.5
 
-a, h3
-  font-size         grid-size*4
-  line-height       grid-size*6
+a, p
+  font-size grid-size*4
+  line-height grid-size*6
 
-p
-  font-size         grid-size*3
-  line-height       grid-size*5
+p.small
+  font-size grid-size*3
+  line-height grid-size*5
 
 .logo
 
-  font-size         grid-size*5
-  line-height       grid-size*7
+  font-size grid-size*5
+  line-height grid-size*7
 
 
 
 
-// Header
-
-header
-  background        color-dark
-  width             100%
-  color             color-light
-
-  nav
-    width grid-fullwidth
-    margin auto
-    padding grid-size*2
-    display flex
-    justify-content space-between
-
-    a
-      padding grid-size*2
-
-
-
-
-// Actions
+// General
 
 nav
   li
@@ -114,6 +99,49 @@ nav
       border-radius grid-size
       background-color color-accent
       display block
+
+nav, .content
+  width grid-fullwidth
+  margin auto
+  padding grid-size*2
+
+
+
+
+// Header
+
+header
+  background color-dark
+  width 100%
+  color color-light
+
+  nav
+    display flex
+    justify-content space-between
+
+
+
+
+// Section
+
+
+section
+  width             100%
+
+section.primary
+  background-color color-primary
+  text-align center
+
+  .content
+    padding grid-size*28 grid-size*2 0 grid-size*2
+
+    img
+      height grid-size*50
+      width auto
+      margin auto
+      margin-top grid-size*10
+
+
 
 
 

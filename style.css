@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,7 @@ html {
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   color: #202634;
   margin: auto;
 }
@@ -31,6 +32,15 @@ a {
   cursor: pointer;
   display: block;
 }
+h1,
+h2,
+a,
+p,
+p.small,
+.logo {
+  padding: 8px;
+  font-weight: inherit;
+}
 h1 {
   font-size: 48px;
   line-height: 60px;
@@ -40,32 +50,17 @@ h2 {
   line-height: 30px;
 }
 a,
-h3 {
+p {
   font-size: 16px;
   line-height: 24px;
 }
-p {
+p.small {
   font-size: 12px;
   line-height: 20px;
 }
 .logo {
   font-size: 20px;
   line-height: 28px;
-}
-header {
-  background: #202634;
-  width: 100%;
-  color: #fff;
-}
-header nav {
-  width: 872px;
-  margin: auto;
-  padding: 8px;
-  display: flex;
-  justify-content: space-between;
-}
-header nav a {
-  padding: 8px;
 }
 nav li a::after {
   content: "";
@@ -74,4 +69,35 @@ nav li a::after {
   border-radius: 4px;
   background-color: #ffd33e;
   display: block;
+}
+nav,
+.content {
+  width: 872px;
+  margin: auto;
+  padding: 8px;
+}
+header {
+  background: #202634;
+  width: 100%;
+  color: #fff;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+section {
+  width: 100%;
+}
+section.primary {
+  background-color: #fffbef;
+  text-align: center;
+}
+section.primary .content {
+  padding: 112px 8px 0 8px;
+}
+section.primary .content img {
+  height: 200px;
+  width: auto;
+  margin: auto;
+  margin-top: 40px;
 }
