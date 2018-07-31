@@ -1,2 +1,123 @@
+// Import
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+
+
+
+// Variables
+
+grid-size = 4px
+grid-fullwidth = grid-size*218
+grid-onethird = 33%
+
+color-dark = #202634
+color-light = #FFFFFF
+color-accent = #FFD33E
+color-primary = #FFFBEF
+color-secondary = #F4F4F4
+
+
+
+
+// Set up
+
+*
+  margin              0
+  padding             0
+  text-decoration     none
+  outline             none
+  border              none
+  -webkit-box-sizing  border-box
+  -moz-box-sizing     border-box
+  box-sizing          border-box
+
+html
+  height              100%
+  font-size           62.5%
+
 body
-  background yellow
+  height              100%
+  font-family         'Montserrat', sans-serif
+  color               color-dark
+  margin              auto
+
+li
+  list-style          none
+  display             inline-block
+
+img
+  display             block
+
+a
+  color               inherit
+  cursor              pointer
+  display             block
+
+
+
+
+// Text
+
+h1
+  font-size         grid-size*12
+  line-height       grid-size*15
+
+h2
+  font-size         grid-size*6
+  line-height       grid-size*7.5
+
+a, h3
+  font-size         grid-size*4
+  line-height       grid-size*6
+
+p
+  font-size         grid-size*3
+  line-height       grid-size*5
+
+.logo
+
+  font-size         grid-size*5
+  line-height       grid-size*7
+
+
+
+
+// Header
+
+header
+  background        color-dark
+  width             100%
+  color             color-light
+
+  nav
+    width grid-fullwidth
+    margin auto
+    padding grid-size*2
+    display flex
+    justify-content space-between
+
+    a
+      padding grid-size*2
+
+
+
+
+// Actions
+
+nav
+  li
+    a::after
+      content ""
+      width 100%
+      height grid-size
+      border-radius grid-size
+      background-color color-accent
+      display block
+
+
+
+
+
+
+// End
