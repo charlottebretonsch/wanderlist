@@ -1,90 +1,55 @@
-html
+extends layout.pug
 
-  head
+block content
 
-    title Wanderlist
-    link(rel="stylesheet" type="text/css" href="./style.css")
+  section.primary
+    div.content
 
-  body
+      h1 Wanderlist
+      h2 A smart checklist to help you pack for your trips
+      img(src="./assets/illustration-wanderlist.png" alt="Luggage, suitcase and backpack base icons created by Made by Made")
 
-    header
-      nav
-      
-        a.logo(href="./index.html") Wanderlist  
-        
-        ul
-          li 
-            a.link(href="") City escape
-          li 
-            a.link(href="") Beach holiday
-          li 
-            a.link(href="") Countryside retreat
+  section.secondary
+    div.content
 
-    section.primary
-      div.content
-      
-        h1 Wanderlist
-        h2 A smart checklist to help you pack for your trips
-        img(src="./assets/illustration-wanderlist.png" alt="Luggage, suitcase and backpack base icons created by Made by Made")
-      
-    section.secondary
-      div.content
-      
-        h2 What's your trip like?
-        
-        div.blocks
-        
-          div.block.primary
-            p City escape
-            a.button(href="./city") Start packing
-            img(src="./assets/illustration-city.png" alt="City base icon created by Made by Made")
-          
-          div.block.primary
-            p Beach holiday
-            a.button(href="./beach") Start packing
-            img(src="./assets/illustration-beach.png" alt="City base icon created by Made by Made")
-            
-          div.block.primary
-            p Countryside retreat
-            a.button(href="./countryside") Start packing
-            img(src="./assets/illustration-countryside.png" alt="City base icon created by Made by Made")
+      h2 What's your trip like?
 
-    section.secondary
-      div.content
-      
-        h2 Why Wanderlist?
-        p Have you ever found yourself flying to another country to realise once you’re there that you’ve forgotten your toothbrush, phone charger or camera? I have. Many, many, many times.
+      div.blocks
 
-        div.blocks
+        div.block.primary
+          p City escape
+          a.button(href="./city.html") Start packing
+          img(src="./assets/illustration-city.png" alt="City base icon created by Made by Made")
 
-          div.block.primary
-            p Save money
-            p.small You won’t have to spend money buying things you could have brought with you for free.
-            img(src="./assets/illustration-savemoney.png" alt="City base icon created by Made by Made")
-          
-          div.block.primary
-            p Save time
-            p.small You won’t have to find a shop last minute, get there and look for a product in a unfamiliar setting.
-            img(src="./assets/illustration-savetime.png" alt="City base icon created by Made by Made")
-            
-          div.block.primary
-            p Relax
-            p.small You’ll feel confident that you’ll be prepared for your trip. It’s one less thing to think about, what a relief!
-            img(src="./assets/illustration-relax.png" alt="City base icon created by Made by Made")
+        div.block.primary
+          p Beach holiday
+          a.button(href="./beach.html") Start packing
+          img(src="./assets/illustration-beach.png" alt="City base icon created by Made by Made")
 
-    footer
-      nav
-        
-        aside
-          p Made with love by 
-            a.link.inline(href="./index.html") Charlotte Breton Schreiner  
-          p.small Base icons created by Made by Made
-        
-        ul
-          li 
-            a.link(href="") Product Hunt
-          li 
-            a.link(href="") Github
+        div.block.primary
+          p Countryside retreat
+          a.button(href="./countryside.html") Start packing
+          img(src="./assets/illustration-countryside.png" alt="City base icon created by Made by Made")
 
+  section.secondary
+    div.content
 
-// End
+      h2 Why Wanderlist?
+      p Have you ever found yourself flying to another country to realise once you’re there that you’ve forgotten your toothbrush, phone charger or camera? I have. Many, many, many times.
+
+      div.blocks
+
+        div.block.primary
+          p Save money
+          p.small You won’t have to spend money buying things you could have brought with you for free.
+          img(src="./assets/illustration-savemoney.png" alt="City base icon created by Made by Made")
+
+        div.block.primary
+          p Save time
+          p.small You won’t have to find a shop last minute, get there and look for a product in a unfamiliar setting.
+          img(src="./assets/illustration-savetime.png" alt="City base icon created by Made by Made")
+
+        div.block.primary
+          p Relax
+          p.small You’ll feel confident that you’ll be prepared for your trip. It’s one less thing to think about, what a relief!
+          img(src="./assets/illustration-relax.png" alt="City base icon created by Made by Made")

@@ -8,6 +8,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html {
   height: 100%;
@@ -81,7 +83,7 @@ a.button {
   color: #fff;
   margin: 8px auto;
   border-radius: 8px;
-  width: 160px;
+  display: inline-block;
 }
 nav,
 .content {
@@ -135,9 +137,10 @@ section.secondary .content {
 .blocks {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .blocks .block {
-  flex-grow: 1;
+  width: calc(33% - 16px);
   border-radius: 8px;
   margin: 8px;
 }
@@ -149,6 +152,30 @@ section.secondary .content {
   height: auto;
   width: 100%;
   padding: 24px 8px 0 8px;
+}
+.blocks .block.item {
+  height: 88px;
+  background-color: #f4f4f4;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+.blocks .block.item p {
+  width: calc(100% - 104px);
+  text-align: left;
+}
+.blocks .block.item .tick {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid #ffd33e;
+  background-color: #fff;
+  margin: 8px;
+}
+.blocks .block.item img {
+  height: 64px;
+  width: 64px;
+  padding: 8px;
 }
 footer {
   background: #f4f4f4;

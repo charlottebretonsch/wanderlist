@@ -1,0 +1,59 @@
+extends layout.pug
+include mixins.pug
+
+block content
+  section.primary
+    div.content
+    
+      h1 Your city escape list
+      h2 Tick what you've packed
+      img(src="./assets/illustration-city.png" alt="Luggage, suitcase and backpack base icons created by Made by Made")
+    
+  section.secondary
+    div.content
+    
+      h2 Essentials
+      
+      div.blocks
+      
+        div.block.item
+          div.tick
+          img(src="./assets/icon-passport.png" alt="Base icon created by Made by Made")
+          p Passport
+          
+        +item("Flight tickets", "flight")
+          
+        div.block.item
+          div.tick
+          img(src="./assets/icon-hotel.png" alt="Base icon created by Made by Made")
+          p Hotel bookings
+          
+        div.block.item
+          div.tick
+          img(src="./assets/icon-wallet.png" alt="Base icon created by Made by Made")
+          p Wallet
+          
+        div.block.item
+          div.tick
+          img(src="./assets/icon-phone.png" alt="Base icon created by Made by Made")
+          p Phone with charger
+
+  section.secondary
+    div.content
+    
+      h2 Basics
+
+      div.blocks
+
+        div.block.item
+          p Save money
+
+  section.secondary
+    div.content
+    
+      h2 Extras
+
+      div.blocks
+
+        div.block.item
+          p Save money

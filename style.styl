@@ -9,7 +9,6 @@
 
 grid-size = 4px
 grid-fullwidth = grid-size*218
-grid-onethird = 33%
 
 color-dark = #202634
 color-light = #FFFFFF
@@ -31,6 +30,8 @@ color-secondary = #F4F4F4
   -webkit-box-sizing border-box
   -moz-box-sizing border-box
   box-sizing border-box
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 html
   height 100%
@@ -109,7 +110,7 @@ a.button
   color color-light
   margin grid-size*2 auto
   border-radius grid-size*2
-  width grid-size*40
+  display inline-block
 
 nav, .content
   width grid-fullwidth
@@ -175,9 +176,10 @@ section.secondary
 .blocks
   display flex
   flex-direction row
+  flex-wrap wrap
 
   .block
-    flex-grow 1
+    width calc(33% - 16px)
     border-radius grid-size*2
     margin grid-size*2
 
@@ -190,6 +192,30 @@ section.secondary
       width 100%
       padding grid-size*6 grid-size*2 0 grid-size*2
 
+
+  .block.item
+    height grid-size*22
+    background-color color-secondary
+    padding grid-size*3 grid-size*4
+    display flex
+    align-items center
+
+    p
+      width calc(100% - 104px)
+      text-align left
+
+    .tick
+      width grid-size*6
+      height grid-size*6
+      border-radius grid-size*1
+      border 2px solid color-accent
+      background-color white
+      margin grid-size*2
+
+    img
+      height grid-size*16
+      width grid-size*16
+      padding grid-size*2
 
 
 
