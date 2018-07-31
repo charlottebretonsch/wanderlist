@@ -42,6 +42,7 @@ body
   font-weight 400
   color color-dark
   margin auto
+  margin-top grid-size*15
 
 li
   list-style none
@@ -106,8 +107,9 @@ a.button
   padding grid-size*4 grid-size*6
   background color-dark
   color color-light
-  margin grid-size*2
+  margin grid-size*2 auto
   border-radius grid-size*2
+  width grid-size*40
 
 nav, .content
   width grid-fullwidth
@@ -123,6 +125,8 @@ header
   background color-dark
   width 100%
   color color-light
+  position fixed
+  top 0
 
   nav
     display flex
@@ -144,10 +148,10 @@ section.primary
     padding grid-size*28 grid-size*2 0 grid-size*2
 
     img
-      height grid-size*50
+      height grid-size*58
       width auto
       margin auto
-      margin-top grid-size*10
+      padding grid-size*8 grid-size*2 0 grid-size*2
 
 section.secondary
   text-align center
@@ -173,7 +177,7 @@ section.secondary
   flex-direction row
 
   .block
-    width grid-onethird
+    flex-grow 1
     border-radius grid-size*2
     margin grid-size*2
 
@@ -203,6 +207,35 @@ footer
     display flex
     justify-content space-between
     padding grid-size*12 grid-size*2 grid-size*28 grid-size*2
+
+
+
+
+
+
+
+// Responsive
+
+@media screen and (max-width: 873px)
+
+  body
+    margin-top 0
+
+  header
+    display none
+
+  nav, .content
+    width 100%
+    margin auto
+
+
+  img
+    width 100% !important
+    height auto !important
+
+  .blocks
+    flex-direction column
+
 
 
 
