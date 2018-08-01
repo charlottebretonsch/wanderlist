@@ -254,13 +254,39 @@ footer
     width 100%
     margin auto
 
+  footer
 
-  img
-    width 100% !important
-    height auto !important
+    nav
+      padding grid-size*8 grid-size*4 grid-size*14 grid-size*4
+      justify-content flex-start
+      flex-direction column
+
+
+  section.primary
+
+    .content
+      padding grid-size*16 grid-size*4 0 grid-size*4
+
+      img
+        width 100%
+        height auto
+
+  section.secondary
+
+    .content
+      padding grid-size*8 grid-size*4
+
+    h2
+      margin-bottom grid-size*4
+
+    .blocks
+      margin-top grid-size*4
 
   .blocks
     flex-direction column
+
+    .block
+      width calc(100% - 16px)
 
 
 
