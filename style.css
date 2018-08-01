@@ -177,6 +177,14 @@ section.secondary .content {
   width: 64px;
   padding: 8px;
 }
+.blocks .block.item:hover {
+  cursor: pointer;
+}
+.blocks .block.item:hover .tick {
+  background-color: #ffd33e;
+  background-image: url("./assets/icon-tick.png");
+  background-size: contain;
+}
 footer {
   background: #f4f4f4;
   width: 100%;
