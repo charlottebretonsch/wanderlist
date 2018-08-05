@@ -62,7 +62,7 @@ a
 
 // Text
 
-h1, h2, a, p, p.small, .logo
+h1, h2, a, p, p.small, .logo, label
   padding grid-size*2
   font-weight inherit
 
@@ -74,7 +74,7 @@ h2
   font-size grid-size*6
   line-height grid-size*7.5
 
-a, p
+a, p, label
   font-size grid-size*4
   line-height grid-size*6
 
@@ -128,6 +128,7 @@ header
   color color-light
   position fixed
   top 0
+  z-index 8
 
   nav
     display flex
@@ -136,7 +137,7 @@ header
 
 
 
-// Section
+// Sections
 
 section
   width 100%
@@ -171,6 +172,8 @@ section.secondary
     padding grid-size*12 grid-size*2
 
 
+
+
 // Blocks
 
 .blocks
@@ -192,38 +195,60 @@ section.secondary
       width 100%
       padding grid-size*6 grid-size*2 0 grid-size*2
 
-
-  .block.item
+  label.item
     height grid-size*22
+    padding grid-size*3 grid-size*4 grid-size*3 grid-size*32
     background-color color-secondary
-    padding grid-size*3 grid-size*4
+    text-align left
     display flex
-    align-items center
+    align-items: center;
+    position relative
+    cursor pointer
+    -webkit-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
 
-    p
-      width calc(100% - 104px)
-      text-align left
+    input
+      position absolute
+      opacity 0
+      cursor pointer
 
-    .tick
+    .checkmark
       width grid-size*6
       height grid-size*6
       border-radius grid-size*1
       border 2px solid color-accent
       background-color color-light
-      margin grid-size*2
+      position absolute
+      top grid-size*8
+      left grid-size*7
+
+      &:after
+        content ""
+        position absolute
+        display none
+        width grid-size*5
+        height grid-size*5
+        background-image url("./assets/icon-tick.png")
+        background-size contain
+        left 0
+        top 0
+
+    input:checked ~ .checkmark
+      background-color color-accent
+
+    input:checked ~ .checkmark:after
+      display block
 
     img
-      height grid-size*16
-      width grid-size*16
-      padding grid-size*2
+      height grid-size*12
+      width grid-size*12
+      position absolute
+      top grid-size*5
+      left grid-size*17
 
-  .block.item:hover
-    cursor pointer
 
-    .tick
-      background-color color-accent
-      background-image url("./assets/icon-tick.png")
-      background-size contain
 
 
 // Footer
@@ -240,9 +265,6 @@ footer
     display flex
     justify-content space-between
     padding grid-size*12 grid-size*2 grid-size*28 grid-size*2
-
-
-
 
 
 
@@ -294,6 +316,8 @@ footer
 
     .block
       width calc(100% - 16px)
+
+
 
 
 

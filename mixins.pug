@@ -1,5 +1,6 @@
 mixin item(name, icon)
-  div.block.item
-    div.tick
+    
+  label.block.item= name
+    input(type="checkbox" name="agreement")
     img(src="./assets/icon-"+icon+".png" alt=" "+name+"base icon created by Made by Made")
-    p= name
+    span.checkmark
