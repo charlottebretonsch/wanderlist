@@ -33,3 +33,8 @@ function makeWanderlist() {
 }
 
 window.wanderlist = makeWanderlist()
+
+const page = window.location.pathname.split('/').pop().split('.').shift()
+window.wanderlist.page = page
+
+window.wanderlist.render(page)
