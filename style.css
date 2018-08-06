@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400");
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ p.small,
 .logo,
 label {
   padding: 8px;
-  font-weight: inherit;
+  font-weight: 400;
 }
 h1 {
   font-size: 48px;
