@@ -1,6 +1,6 @@
 mixin item(name, icon)
-    
-  label.block.item= name
-    input(type="checkbox" name="agreement")
-    img(src="./assets/icon-"+icon+".png" alt=" "+name+"base icon created by Made by Made")
+
+  label.block.item(data-name=name)= name
+    input(type="checkbox" onchange="wanderlist.set(wanderlist.page, '"+name+"', event.target.checked)")
+    img(src="./assets/icon-"+icon+".png" alt=name+" base icon created by Made by Made")
     span.checkmark
