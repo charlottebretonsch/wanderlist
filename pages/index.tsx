@@ -7,8 +7,6 @@ import {
   Section,
   Item,
   getItems,
-  notion,
-  getIconPath,
 } from "../data";
 import { ItemContextProvider } from "../components/ItemContext";
 
@@ -49,19 +47,9 @@ const Index = ({ sections, items }: Props) => (
 );
 
 export async function getStaticProps() {
-  const path = require("path");
-  const items = await getItems();
-
-  const promises = items.map((item) => {
-    if (!item.meta.icon) return;
-    const iconPath = getIconPath(item);
-    const filePath = path.resolve(process.cwd(), `./public${iconPath}`);
-    return notion.downloadImage(item.meta.icon, filePath, 40);
-  });
-  await Promise.all(promises);
-
   return {
-    props: { items, sections: await getSections() },
+    props: { items: await getItems(), sections: await getSections() },
+    revalidate: 45 * 60
   };
 }
 

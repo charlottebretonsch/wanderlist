@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Item, getIconPath } from "../data";
+import { Item } from "../data";
 import Tick from "./Tick";
 
 const ListItem = styled.li`
@@ -47,7 +47,7 @@ interface Props {
 
 const Row = ({ item, done, toggle }: Props) => (
   <ListItem key={item.id} done={done} onClick={toggle}>
-    {item.meta.icon && <Icon src={getIconPath(item)} />}
+    {item.meta.icon && <Icon src={item.meta.icon} />}
     <h3>{item.props.Name}</h3>
     <StyledTick checked={done} />
   </ListItem>

@@ -1,27 +1,25 @@
-import Notion, { LiteCollectionItem } from "@notion-cms/client";
+import Notion, { DatabaseProps, ParsedPage } from "@notion-cms/client";
 import { UUID } from "@notion-cms/types";
 
-interface SectionProps {
+interface SectionProps extends DatabaseProps {
   Name: string;
   Items: UUID[];
 }
-export interface Section extends LiteCollectionItem<SectionProps> {}
-interface ItemProps {
+export interface Section extends ParsedPage<SectionProps> {}
+interface ItemProps extends DatabaseProps {
   Name: string;
   Section: string;
   Icon: any;
 }
-export interface Item extends LiteCollectionItem<ItemProps> {}
+export interface Item extends ParsedPage<ItemProps> {}
 
-export const notion = new Notion(process.env.NOTION_API_KEY);
+const notion = new Notion({ auth: process.env.NOTION_API_TOKEN });
 
 const sectionsCollectionId = "124de3be-382c-4a12-898f-4a0a6ef97f83";
 const itemsCollectionId = "c6483876-8800-410d-b518-d3211d9e1dfd";
 
 export const getSections = (): Promise<Section[]> =>
-  notion.loadCollection(sectionsCollectionId);
+  notion.loadDatabase(sectionsCollectionId, {});
 
 export const getItems = (): Promise<Item[]> =>
-  notion.loadCollection(itemsCollectionId);
-
-export const getIconPath = (item: Item) => `/items/${item.id}.webp`;
+  notion.loadDatabase(itemsCollectionId, {});
