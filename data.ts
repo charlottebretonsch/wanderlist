@@ -13,6 +13,7 @@ interface ItemProps extends DatabaseProps {
 }
 export interface Item extends ParsedPage<ItemProps> {}
 
+console.log(`"${process.env.NOTION_API_TOKEN}"`);
 const notion = new Notion({ auth: process.env.NOTION_API_TOKEN });
 
 const sectionsCollectionId = "124de3be-382c-4a12-898f-4a0a6ef97f83";
